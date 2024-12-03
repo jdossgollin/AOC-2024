@@ -61,9 +61,13 @@ function main()
     input_1 = open("data/1.txt") do f
         read(f, String)
     end
+
     list1, list2 = parse_input(input_1)
     dist = distance(list1, list2)
     println(dist)
+
+    score = similarity(list1, list2)
+    println(score)
 end
 
 main()
